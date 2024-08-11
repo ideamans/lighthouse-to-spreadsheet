@@ -65,7 +65,7 @@ type LighthouseResult struct {
 }
 
 func ReadLighthouseResult(filePath string) (*LighthouseResult, error) {
-	jsonFile, err := os.Open("./example/lighthouse.report.json")
+	jsonFile, err := os.Open(filePath)
 	if err != nil {
 		return nil, err
 	}
