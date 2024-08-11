@@ -234,11 +234,6 @@ func main() {
 	flag.StringVar(&sheetName, "sheet-name", sheetName, "Sheet name")
 	flag.Parse()
 
-	fmt.Printf("lighthouse-result: %s\n", lighthouseResultPath)
-	fmt.Printf("spreadsheet-id: %s\n", spreadsheetId)
-	fmt.Printf("sheet-name: %s\n", sheetName)
-	return
-
 	// Lighthouseの結果を読み込む
 	lighthouseResult, err := ReadLighthouseResult(lighthouseResultPath)
 	if err != nil {
